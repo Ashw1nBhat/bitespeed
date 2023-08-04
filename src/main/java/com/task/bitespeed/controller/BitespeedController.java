@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/identify")
+@RequestMapping("/api")
 public class BitespeedController {
     @Autowired
     private BitespeedRepository repo;
-    @PostMapping("/")
+    @PostMapping("/identify")
     public BitespeedModel addData(@RequestBody BitespeedModel bitespeedmodel){
         return repo.save(bitespeedmodel);
     }
