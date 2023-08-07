@@ -17,4 +17,8 @@ public class BitespeedController {
     public BitespeedModel addData(@RequestBody BitespeedModel bitespeedmodel){
         return repo.save(bitespeedmodel);
     }
+    @GetMapping("/")
+    public String test(){
+        return "The api Endpoint is working";
+    }
 }
